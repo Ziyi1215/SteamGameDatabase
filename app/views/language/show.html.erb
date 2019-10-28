@@ -1,0 +1,8 @@
+  <p style="margin-top: 5%" class="show">
+    <strong>language name:</strong>
+   <%= @language.name %>
+  </p>
+
+<%= link_to 'Edit', edit_language_path(@language) %> |
+<%= link_to 'Add New language', new_language_path %> |
+<%= link_to 'Back', languages_path %>

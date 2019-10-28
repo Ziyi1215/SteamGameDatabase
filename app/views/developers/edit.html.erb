@@ -1,0 +1,17 @@
+<% provide(:title, 'Edit developer') %>
+<h1 class="title">Edit developer</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@developer) do |f| %>
+      <%= render 'shared/error_messages', obj: @developer %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: 'Enter developer name', autofocus: true, class: 'form-control'%>
+
+      <%= f.submit "Update developer information", class: "btn btn-primary" %>
+    <% end %>
+    <br>
+    <p><%= link_to 'Cancel and return to developer information', @developer %></p>
+  </div>
+</div>

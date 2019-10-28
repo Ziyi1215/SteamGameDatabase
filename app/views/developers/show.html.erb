@@ -1,0 +1,21 @@
+  <p style="margin-top: 5%" class="show">
+    <strong>Developer name:</strong>
+   <%= @developer.name %>
+    <br></br>
+    <strong>Developed games:</strong>
+  <table width=100%>
+    <tbody>
+    <% @developed_games.each do |game| %>
+      <tr class="col-xs-10">
+        <ul class="list-unstyled">
+          <div class="col-xs-offset-0 col-xs-2 text-left">&diams; &nbsp;<span style="font-size: 11px"><%= game.name %><br> <br/></span></div>
+        </ul>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  </p>
+
+<%= link_to 'Edit', edit_developer_path(@developer) %> |
+<%= link_to 'Add New developer', new_developer_path %> |
+<%= link_to 'Back', developers_path %>

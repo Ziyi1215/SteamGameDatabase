@@ -1,0 +1,31 @@
+  <p style="margin-top: 5%" class="show">
+    <strong>Game name:</strong>
+   <%= @game.name %>
+    <br></br>
+    <strong>Developer:</strong>
+    <% if !@game_developer.nil? %>
+      <%= @game_developer.name %>
+    <% end %>
+    <br></br>
+    <strong>Publisher:</strong>
+    <% if !@game_publisher.nil? %>
+      <%= @game_publisher.name %>
+    <% end %>
+    <br></br>
+    <strong>Language support:</strong>
+    <table width=100%>
+      <tbody>
+      <% @game_languages.each do |language| %>
+        <tr class="col-xs-10">
+          <ul class="list-unstyled">
+            <div class="col-xs-offset-0 col-xs-2 text-left">&diams; &nbsp;<span style="font-size: 11px"><%= language.name %><br> <br/></span></div>
+          </ul>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </p>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Add New game', new_game_path %> |
+<%= link_to 'Back', games_path %>

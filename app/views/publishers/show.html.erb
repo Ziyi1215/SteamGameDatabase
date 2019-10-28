@@ -1,0 +1,21 @@
+  <p style="margin-top: 5%" class="show">
+    <strong>Publisher name:</strong>
+   <%= @publisher.name %>
+    <br></br>
+    <strong>Published games:</strong>
+  <table width=100%>
+    <tbody>
+    <% @published_games.each do |game| %>
+      <tr class="col-xs-10">
+        <ul class="list-unstyled">
+          <div class="col-xs-offset-0 col-xs-2 text-left">&diams; &nbsp;<span style="font-size: 11px"><%= game.name %><br> <br/></span></div>
+        </ul>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  </p>
+
+<%= link_to 'Edit', edit_publisher_path(@publisher) %> |
+<%= link_to 'Add New publisher', new_publisher_path %> |
+<%= link_to 'Back', publishers_path %>
