@@ -2,6 +2,9 @@
     <strong>Game name:</strong>
    <%= @game.name %>
     <br></br>
+    <strong>Price:</strong>
+    $<%= @game.price %>
+    <br></br>
     <strong>Developer:</strong>
     <% if !@game_developer.nil? %>
       <%= @game_developer.name %>
